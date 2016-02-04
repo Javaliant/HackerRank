@@ -1,13 +1,8 @@
-
-
-
 import java.util.Scanner;
-
 
 public class Staircase {
 	public static void main(String[] args) {
-		//int numberOfStairs = new Scanner(System.in).nextInt();
-		int numberOfStairs = 5;
+		int numberOfStairs = new Scanner(System.in).nextInt();
 		StringBuilder stairBuilder = new StringBuilder();
 
 		for (int i = 1; i <= numberOfStairs; i++) {
