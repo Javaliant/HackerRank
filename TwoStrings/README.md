@@ -6,5 +6,4 @@
  -  There will be T descriptions of the test cases.
  -  Each description contains two lines.
  -  The first line contains the string A and the second line contains the string B.
-
-For each test case, display YES (in a newline), if there is a common substring. Otherwise, display NO.
+ -  For each test case, display YES (in a newline), if there is a common substring. Otherwise, display NO.
