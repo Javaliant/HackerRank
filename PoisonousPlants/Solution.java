@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+/* Author: Luigi Vincent */
+
 import java.util.Scanner;
 
 public class Solution {
@@ -21,20 +21,20 @@ public class Solution {
 
 	private static boolean killCommand(int[] garden) {
 		boolean plantDied = false;
-		int last = garden[0];
-		List<Integer> targets = new ArrayList<>();
+		int lastIndex = garden.length - 1;
+		int last = garden[lastIndex];
 
-		for (int i = 1; i < garden.length; i++) {
+		for (int i = lastIndex - 1; i >= 0; i--) {
 			if (garden[i] == -1) {
 				continue;
 			}
-			
 			int current = garden[i];
-			if (current > last)	{
+			if (current < last)	{
 				plantDied = true;
-				targets.add(i);
+				garden[lastIndex] = -1;
 			}
 			last = current;
+			lastIndex = i;
 		}
 
 		for (Integer target : targets) {
